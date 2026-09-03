@@ -1,0 +1,398 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.site-header{
+  display: flex;
+  justify-content: space-between;     /* Pushes logo to left and nav to right */
+  align-items: center;               /* Vertically centers items */
+  padding: 20px 10%;                /* Spacing on the sides */
+  background-color: #fff;      /* Dark sleek background color */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  /* z-index: 1000; */
+}
+
+/* Logo Styling */
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+}
+
+.logo span{
+  color: #0076ff;
+  padding: 10px;
+}
+
+/* navigation */
+.main-nav ul{
+  display: flex;     /* Aligns menu links horizontally */
+  list-style: none;  /* Removes standard bullet points */
+  gap: 30px;           /* Even spacing between links */
+
+}
+
+/* Individual Link Styling */
+.main-nav a {
+  text-decoration: none;          /* Removes text underlines */
+  color: #666666;
+  font-size: 16px;
+  font-weight: 900;
+  transition: color 0.3s ease;    /* Smooth color transition on hover */
+}
+
+.main-nav a:hover {
+  color: #3498db;                 /* Highlighting color when hovered */
+}
+
+.btn{
+  color: #ffffff;
+  background-color: #0076ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-one{
+  color: #991b1b;
+  background-color: #c5dbf5;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 30px;
+}
+
+.main-container{
+  display: flex;
+  justify-content: center;
+  /* gap: 20px; */
+  /* border: 1px solid black; */
+}
+.left-container{
+  /* border: 1px solid rebeccapurple; */
+  width: 48%;
+  height: 490px;
+  padding: 100px;
+  background-color: #0076ff;
+  min-width: 400px;
+  border-radius: 5px;
+}
+.left-container h1{
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 40px;
+}
+.left-container p{
+  color: #ffffff;
+  /* margin: 20px; */
+}
+.right-container{
+  /* border: 1px solid black; */
+  width: 50%;
+  height: 490px;
+}
+.right-container img{
+  background-repeat: repeat;
+}
+.btn-container{
+  display: flex;
+  gap: 20px;
+}
+
+.big-btn-1{
+  padding: 10px;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 50px;
+  margin: 10px;
+  text-decoration: none;
+  height: 40px;
+  width: 240px;
+  text-align: center;
+  font-weight: bold;
+}
+.big-btn-2{
+  padding: 10px;
+  background-color: #ffffff;
+  color: #0076ff;
+  border-radius: 50px;
+  margin: 10px;
+  text-decoration: none;
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+}
+/* .image{
+  background-color: #0076ff;
+  max-width: 100%;
+  height: auto;
+  align-items: center;
+} */
+
+footer {
+    background-color: #333333; /* Dark gray background */
+    color: #ffffff;           /* White text color */
+    text-align: center;       /* Center the content */
+    padding: 20px 0;          /* Add vertical padding */
+    font-family: Arial, sans-serif;
+}
+
+footer a {
+    color: #ffcc00;           /* Accent color for links */
+    text-decoration: none;    /* Remove underline */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/*  form styling */
+
+/* Prevent unexpected element stretching */
+
+
+/* Center the form box on the viewport */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Style the form block */
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Stack inputs vertically and add spacing */
+.form-group {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1.2rem;
+}
+.form-group-one {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-label {
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.form-label-g {
+  margin-top: 1.0rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.form-input {
+  width: 400px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left: 10px;
+}
+
+.form-button {
+  width: 50%;
+  padding: 0.75rem;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+.btn-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form,p{
+  font-weight: bolder;
+  padding: 15px;
+}
+
+.question-input {
+  width:30px;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-left: 2px;
+}
+.button-disable{
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/*          login style */
+/* Container Layout */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 20px;
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+/* Typography & Headers */
+.login-header h2 {
+  margin: 0 0 8px 0;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.login-header p {
+  margin: 0 0 24px 0;
+  color: #6b7280;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Forms & Inputs */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  color: #374151;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Password Field Wrapper */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.password-toggle:hover {
+  color: #111827;
+}
+
+/* Links & Buttons */
+.forgot-link, .signup-link {
+  color: #2563eb;
+  font-size: 13px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-link:hover, .signup-link:hover {
+  text-decoration: underline;
+}
+
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #1d4ed8;
+}
+
+.submit-button:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+/* Feedback States */
+.error-message {
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #991b1b;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.signup-prompt {
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #4b5563;
+}
