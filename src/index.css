@@ -57,6 +57,58 @@
   font-weight: 600;
   text-decoration: none;
 }
+
+/* Mobile Responsive Breakpoint */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .main-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .main-nav li {
+    margin: 0;
+  }
+
+  .main-container {
+    flex-direction: column;
+    gap: 100px;
+    margin: 70px
+  }
+  .left-container {
+    width: 20%;
+    margin-top: 40px;
+    min-height: 810px;
+
+  }
+  .left-container h1{
+    font-size: 10px;
+  }
+
+  .right-container img{
+    width: 400px;
+  height: 300px;
+  object-fit: cover;
+  }
+
+ .left-container .btn-container,a{
+    flex-direction: column;
+    display: block;
+  }
+  .btn-container .big-btn-1 {
+    width: 240px;
+  }
+  .btn-container .big-btn-2 {
+    width: 240px;
+  }
+}
+
+
 .btn-one{
   color: #991b1b;
   background-color: #c5dbf5;

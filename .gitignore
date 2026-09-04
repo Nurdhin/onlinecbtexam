@@ -1,7 +1,8 @@
 #dependencies
 /node_modules
 
-
+#passwprd keys
+/text.txt
 # Logs
 logs
 *.log
