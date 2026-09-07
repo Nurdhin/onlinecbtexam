@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import data from './qst';
+import Header from './Header';
 
 
 const Question = () => {
@@ -42,7 +43,8 @@ const Question = () => {
   const generateOption = (new_array, correct_answer) => {
     let options = [...new_array, correct_answer]
     // let newOptions = shuffle([...options])
-    return options;
+    const newOptions  = [...options].toSorted();
+    return newOptions;
   }
 
   // function handle change
@@ -79,10 +81,12 @@ const Question = () => {
 
 
   return(
+    <>
+    <Header />
     <div className="form-container">
       <div className="contact-form">
         <form >
-          <p>Welcome to online cbt {id} </p>
+          <h2>Welcome to online cbt {id} </h2>
           <p> Question {currentIndex + 1} of {question.length}</p>
           <p>{currentQuestion.question}</p>
 
@@ -118,6 +122,7 @@ const Question = () => {
       
       
     </div>
+    </>
   );
 };
 

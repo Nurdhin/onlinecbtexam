@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, Navigate } from 'react-router-dom';
 import { userData } from './data';
+import Header from './Header';
+
 
 
 const Login = () => {
@@ -68,6 +70,8 @@ const Login = () => {
 
 
     return(
+        <>
+        <Header />
         <div className="login-wrapper">
             <div className="login-container">
                 <div className="login-header">
@@ -120,7 +124,7 @@ const Login = () => {
 
         </div>
        
-        
+        </>
       
     );
 };

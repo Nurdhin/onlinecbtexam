@@ -1,0 +1,111 @@
+/* General Header Layout */
+.header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Desktop Navigation Links */
+.desktop-nav a {
+  margin-left: 20px;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.desktop-nav a:hover {
+  color: #0070f3;
+}
+
+/* Hide Hamburger by default */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+/* Hide Mobile Dropdown Links by default */
+.mobile-nav {
+  display: none;
+}
+
+/* ========================================== */
+/* Responsive Media Query (Screens under 768px)*/
+/* ========================================== */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none; /* Hide desktop nav */
+  }
+
+  .menu-toggle {
+    display: flex; /* Show hamburger button */
+  }
+
+  /* Hamburger to "X" Animation when open */
+  .menu-toggle .bar.open:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+  .menu-toggle .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle .bar.open:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+
+  /* Mobile Dropdown Panel styling */
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .mobile-nav.active {
+    display: flex;
+    max-height: 300px; /* Expands open */
+    padding: 10px 0;
+  }
+
+  .mobile-nav a {
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid #f9f9f9;
+  }
+}

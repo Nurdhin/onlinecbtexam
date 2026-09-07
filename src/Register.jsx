@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { userData } from './data';
 import Login from './Login';
+import Header from './Header';
+
 
 
 function Register() {
@@ -62,6 +64,8 @@ function Register() {
 
     
     return(
+        <>
+        <Header />
         <div className="form-container">
 
             <form onSubmit={handleSubmit} className="contact-form">
@@ -91,7 +95,7 @@ function Register() {
                 </div>
                 <div className="form-group" >
                     <label htmlFor="" className="form-label">
-                    Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Email:
                         <input 
                             type="text" 
                             name="email" 
@@ -105,7 +109,7 @@ function Register() {
                 </div>
                 <div className="form-group">
                     <label htmlFor="" className="form-label">
-                        Subject:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Subject:
                         <select className="form-input" name="subject" value={formData.subject} onChange={handleChange} >
                             <option value="">..Select subject..</option>
                             <option value="General paper">General Paper</option>
@@ -163,7 +167,7 @@ function Register() {
         
 
         </div>
-        
+        </>
     );
 
 };
